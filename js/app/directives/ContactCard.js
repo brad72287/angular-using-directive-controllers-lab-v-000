@@ -1,5 +1,8 @@
 function ContactCard() {
 	return {
+		controller: function ($scope, $filter) {
+                $scope.username = $filter('lowercase')($scope.username)
+        },
 		scope: {
 			name: '=',
 			email: '=',
